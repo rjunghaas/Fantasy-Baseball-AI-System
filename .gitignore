@@ -1,0 +1,23 @@
+# Credentials — never commit
+config.toml
+
+# Personal data — regenerated locally or contains private league info
+data/
+bootstrap/*.csv
+evals/matchup_eval_week12.csv
+evals/my_stats_jun_13_19_eval.csv
+evals/gm_eval.csv
+
+# Agent outputs with personal strategy data
+decisions_*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# OAuth token cache (outside repo but noting for clarity)
+# ~/.fantasy_ingest/ is already outside the repo root
