@@ -1,0 +1,443 @@
+{
+  "date": "2026-07-04",
+  "trend_retrieval": {
+    "eval": "trend_retrieval",
+    "score": 1.0,
+    "passed": 26,
+    "total": 26,
+    "pass_threshold": 1.0,
+    "pass_fail": "PASS",
+    "rows": [
+      {
+        "player_name": "Salvador Perez",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.171,
+        "xwoba_season": 0.288,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Josh Naylor",
+        "stat_type": "batting",
+        "expected_signal": "positive_regression",
+        "babip_14d": 0.22,
+        "xwoba_season": 0.327,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Gleyber Torres",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.417,
+        "xwoba_season": 0.338,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Junior Caminero",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.375,
+        "xwoba_season": 0.372,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "CJ Abrams",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.29,
+        "xwoba_season": 0.387,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Paul Goldschmidt",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.382,
+        "xwoba_season": 0.378,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Xander Bogaerts",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.217,
+        "xwoba_season": 0.32,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Cedanne Rafaela",
+        "stat_type": "batting",
+        "expected_signal": "negative_regression",
+        "babip_14d": 0.375,
+        "xwoba_season": 0.298,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "JJ Bleday",
+        "stat_type": "batting",
+        "expected_signal": "positive_regression",
+        "babip_14d": 0.243,
+        "xwoba_season": 0.39,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Jo Adell",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.278,
+        "xwoba_season": 0.331,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Jose Caballero",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.318,
+        "xwoba_season": 0.287,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Bryce Eldrige",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.514,
+        "xwoba_season": 0.411,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Randy Arozarena",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.308,
+        "xwoba_season": 0.353,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Konnor Griffin",
+        "stat_type": "batting",
+        "expected_signal": "negative_regression",
+        "babip_14d": 0.667,
+        "xwoba_season": 0.303,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Brent Rooker",
+        "stat_type": "batting",
+        "expected_signal": "neutral",
+        "babip_14d": 0.263,
+        "xwoba_season": 0.312,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Munetaka Murakami",
+        "stat_type": "batting",
+        "expected_signal": "insufficient_data",
+        "babip_14d": 0.0,
+        "xwoba_season": 0.38,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Teoscar Hernandez",
+        "stat_type": "batting",
+        "expected_signal": "insufficient_data",
+        "babip_14d": 0.0,
+        "xwoba_season": 0.339,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Mason Miller",
+        "stat_type": "pitching",
+        "expected_signal": "era_inflation",
+        "era_14d": 2.45,
+        "era_season": 0.94,
+        "fip_season": 0.46,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Louis Varland",
+        "stat_type": "pitching",
+        "expected_signal": "neutral",
+        "era_14d": 1.35,
+        "era_season": 0.49,
+        "fip_season": 1.31,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Daniel Palencia",
+        "stat_type": "pitching",
+        "expected_signal": "neutral",
+        "era_14d": 3.6,
+        "era_season": 2.87,
+        "fip_season": 3.68,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Trey Yesavage",
+        "stat_type": "pitching",
+        "expected_signal": "era_inflation",
+        "era_14d": 6.89,
+        "era_season": 3.78,
+        "fip_season": 3.59,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Kyle Harrison",
+        "stat_type": "pitching",
+        "expected_signal": "neutral",
+        "era_14d": 10.13,
+        "era_season": 2.72,
+        "fip_season": 3.11,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Yoshinobu Yamamoto",
+        "stat_type": "pitching",
+        "expected_signal": "era_deflation_risk",
+        "era_14d": 0.68,
+        "era_season": 2.68,
+        "fip_season": 3.43,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Noah Cameron",
+        "stat_type": "pitching",
+        "expected_signal": "neutral",
+        "era_14d": 0.69,
+        "era_season": 3.84,
+        "fip_season": 3.15,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Tarik Skubal",
+        "stat_type": "pitching",
+        "expected_signal": "insufficient_data",
+        "era_14d": 0.0,
+        "era_season": 2.7,
+        "fip_season": 2.12,
+        "pass_fail": "PASS"
+      },
+      {
+        "player_name": "Michael King",
+        "stat_type": "pitching",
+        "expected_signal": "neutral",
+        "era_14d": 5.79,
+        "era_season": 3.46,
+        "fip_season": 4.31,
+        "pass_fail": "PASS"
+      }
+    ]
+  },
+  "matchup": {
+    "eval": "matchup",
+    "sunday": {
+      "score": 0.4,
+      "correct": 2,
+      "wrong": 3,
+      "total_scoreable": 5,
+      "pass_threshold": 0.8,
+      "pass_fail": "FAIL"
+    },
+    "wednesday": {
+      "score": 0.8,
+      "correct": 8,
+      "wrong": 2,
+      "total_scoreable": 10,
+      "pass_threshold": 0.9,
+      "pass_fail": "FAIL"
+    },
+    "detail": [
+      {
+        "category": "R",
+        "sunday_rating": "medium",
+        "wednesday_status": "winning_comfortably",
+        "actual_winner": "me",
+        "computed_sunday_correct": "n/a",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "HR",
+        "sunday_rating": "medium",
+        "wednesday_status": "winning_comfortably",
+        "actual_winner": "me",
+        "computed_sunday_correct": "n/a",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "RBI",
+        "sunday_rating": "weak",
+        "wednesday_status": "winning_comfortably",
+        "actual_winner": "me",
+        "computed_sunday_correct": "yes",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "SB",
+        "sunday_rating": "strong",
+        "wednesday_status": "vulnerable",
+        "actual_winner": "tie",
+        "computed_sunday_correct": "no",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "OBP",
+        "sunday_rating": "weak",
+        "wednesday_status": "losing_badly",
+        "actual_winner": "me",
+        "computed_sunday_correct": "yes",
+        "computed_wednesday_correct": "no"
+      },
+      {
+        "category": "W",
+        "sunday_rating": "medium",
+        "wednesday_status": "losing_close",
+        "actual_winner": "me",
+        "computed_sunday_correct": "n/a",
+        "computed_wednesday_correct": "no"
+      },
+      {
+        "category": "SV",
+        "sunday_rating": "strong",
+        "wednesday_status": "winning_comfortably",
+        "actual_winner": "me",
+        "computed_sunday_correct": "no",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "K",
+        "sunday_rating": "medium",
+        "wednesday_status": "vulnerable",
+        "actual_winner": "me",
+        "computed_sunday_correct": "n/a",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "ERA",
+        "sunday_rating": "weak",
+        "wednesday_status": "losing_badly",
+        "actual_winner": "opp",
+        "computed_sunday_correct": "no",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "WHIP",
+        "sunday_rating": "medium",
+        "wednesday_status": "losing_badly",
+        "actual_winner": "opp",
+        "computed_sunday_correct": "n/a",
+        "computed_wednesday_correct": "yes"
+      }
+    ]
+  },
+  "gm": {
+    "eval": "gm",
+    "execution_failure_week": true,
+    "sunday_categories": {
+      "score": 0.75,
+      "correct": 6,
+      "wrong": 2,
+      "total_scoreable": 8,
+      "pass_threshold": 0.8,
+      "pass_fail": "FAIL"
+    },
+    "wednesday_categories": {
+      "score": 0.5,
+      "correct": 2,
+      "wrong": 2,
+      "total_scoreable": 4,
+      "pass_threshold": 0.9,
+      "pass_fail": "FAIL"
+    },
+    "drop_candidates": {
+      "score": null,
+      "correct": 0,
+      "wrong": 0,
+      "inconclusive": 0,
+      "total_scoreable": 0,
+      "pass_threshold": 0.7,
+      "pass_fail": "N/A \u2014 no drop candidates this week",
+      "detail": []
+    },
+    "detail": [
+      {
+        "category": "r",
+        "derived_sun_rec": "target",
+        "derived_wed_rec": "n/a",
+        "actual_winner": "me",
+        "computed_sunday_correct": "yes",
+        "computed_wednesday_correct": "n/a"
+      },
+      {
+        "category": "hr",
+        "derived_sun_rec": "target",
+        "derived_wed_rec": "n/a",
+        "actual_winner": "me",
+        "computed_sunday_correct": "yes",
+        "computed_wednesday_correct": "n/a"
+      },
+      {
+        "category": "rbi",
+        "derived_sun_rec": "target",
+        "derived_wed_rec": "n/a",
+        "actual_winner": "me",
+        "computed_sunday_correct": "yes",
+        "computed_wednesday_correct": "n/a"
+      },
+      {
+        "category": "sb",
+        "derived_sun_rec": "punt",
+        "derived_wed_rec": "target",
+        "actual_winner": "tie",
+        "computed_sunday_correct": "no",
+        "computed_wednesday_correct": "no"
+      },
+      {
+        "category": "obp",
+        "derived_sun_rec": "target",
+        "derived_wed_rec": "punt",
+        "actual_winner": "me",
+        "computed_sunday_correct": "yes",
+        "computed_wednesday_correct": "no"
+      },
+      {
+        "category": "w",
+        "derived_sun_rec": "target",
+        "derived_wed_rec": "target",
+        "actual_winner": "me",
+        "computed_sunday_correct": "yes",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "sv",
+        "derived_sun_rec": "punt",
+        "derived_wed_rec": "n/a",
+        "actual_winner": "me",
+        "computed_sunday_correct": "no",
+        "computed_wednesday_correct": "n/a"
+      },
+      {
+        "category": "k",
+        "derived_sun_rec": "target",
+        "derived_wed_rec": "target",
+        "actual_winner": "me",
+        "computed_sunday_correct": "yes",
+        "computed_wednesday_correct": "yes"
+      },
+      {
+        "category": "era",
+        "derived_sun_rec": "target",
+        "derived_wed_rec": "punt",
+        "actual_winner": "opp",
+        "computed_sunday_correct": "n/a",
+        "computed_wednesday_correct": "n/a"
+      },
+      {
+        "category": "whip",
+        "derived_sun_rec": "target",
+        "derived_wed_rec": "punt",
+        "actual_winner": "opp",
+        "computed_sunday_correct": "n/a",
+        "computed_wednesday_correct": "n/a"
+      }
+    ]
+  }
+}
