@@ -33,13 +33,28 @@ Steps 2–5 run twice: once with source="roster" and once with source="fa". The 
     - Get player's 14d deltas: W_delta_14d, SV_delta_14d, K_delta_14d, ERA_delta_14d, WHIP_delta_14d
     - Take sum of each player's efficiency_scores (5 total, 1 per category) to produce total_efficiency_14d
     - Add a column called recommendation (see Decision Rules)
-6. Order roster batters by total_efficiency_14d descending and output as `roster_management_batter_output_YYYYMMDD.csv`
-7. Order roster pitchers by total_efficiency_14d descending and output as `roster_management_pitcher_output_YYYYMMDD.csv`
-8. Order FA batters by total_efficiency_14d descending and output as `roster_management_batter_fa_output_YYYYMMDD.csv`
-9. Order FA pitchers by total_efficiency_14d descending and output as `roster_management_pitcher_fa_output_YYYYMMDD.csv`
+6. Order roster batters by total_efficiency_14d descending, roster pitchers by total_efficiency_14d descending, FA batters by total_efficiency_14d descending, and FA pitchers by total_efficiency_14d descending.
+7. Return a single JSON object with four keys: `roster_batters`, `roster_pitchers`, `fa_batters`, `fa_pitchers`. Each key maps to a list of row objects using the column names defined in the Output Schema below. Do not write individual CSV files — the orchestrator will split this JSON into the four files.
 
 ## Output Schema
-All four output files share the same column structure. The roster files and FA files are identical in schema — the only difference is the population evaluated. `no_drop` is always False in the FA files.
+
+Return a single JSON object with this structure:
+```json
+{
+  "roster_batters": [ { ...row using batter columns... }, ... ],
+  "roster_pitchers": [ { ...row using pitcher columns... }, ... ],
+  "fa_batters": [ { ...row using batter columns... }, ... ],
+  "fa_pitchers": [ { ...row using pitcher columns... }, ... ]
+}
+```
+
+The orchestrator will write each list to its corresponding CSV:
+- `roster_batters` → `roster_management_batter_output_YYYYMMDD.csv`
+- `roster_pitchers` → `roster_management_pitcher_output_YYYYMMDD.csv`
+- `fa_batters` → `roster_management_batter_fa_output_YYYYMMDD.csv`
+- `fa_pitchers` → `roster_management_pitcher_fa_output_YYYYMMDD.csv`
+
+Column definitions for each section (roster and FA files share the same schema within their type). `no_drop` is always False in FA sections.
 
 The output CSV for `roster_management_batter_output_YYYYMMDD.csv` and `roster_management_batter_fa_output_YYYYMMDD.csv` will have the following columns:
 | Column | Type | Description |
@@ -95,11 +110,52 @@ Logic for `recommendation` column
 This skill is just going to evaluate all players over season and 14d intervals to look at their contribution scores for their categories and then add a sum-product for their total_efficiency in both time ranges.  It will not make decisions about adding or dropping players, but will just highlight a recommendatino.
 
 ## Example Output
-Example output for `roster_management_batter_output_YYYYMMDD.csv`
-player_id | name | position | no_drop | R_delta_season | HR_delta_season | RBI_delta_season | SB_delta_season | OBP_delta_season | total_efficiency_season | R_delta_14d | HR_delta_14d | RBI_delta_14d | SB_delta_14d | OBP_delta_14d | total_efficiency_14d | recommendation
-konnor_griffin_001 | Konnor Griffin | SS, OF | false | +1.8 | +0.4 | -0.1 | +1.7 | -0.2 | 4.2 | +.87 | -0.02 | +0.23 | +0.81 | +0.06 | 3.9 | 
-
-Example output for `roster_management_pitcher_output_YYYYMMDD.csv`
-player_id | name | position | no_drop | W_delta_season | SV_delta_season | K_delta_season | ERA_delta_season | WHIP_delta_season | total_efficiency_season |  W_delta_14d | SV_delta_14d | K_delta_14d | ERA_delta_14d | WHIP_delta_14d | total_efficiency_14d | recommendation
-mason_miller_001 | Mason Miller | P | true | +0.0 | +0.98 | +0.87 | +0.84 | +0.77 | 4.68 | -.02 | +1.7 | +0.45 | +0.76 | -0.11 | 1.56  | hold
+```json
+{
+  "roster_batters": [
+    {
+      "player_id": "konnor_griffin_001",
+      "name": "Konnor Griffin",
+      "position": "SS, OF",
+      "no_drop": false,
+      "R_delta_season": 1.8,
+      "HR_delta_season": 0.4,
+      "RBI_delta_season": -0.1,
+      "SB_delta_season": 1.7,
+      "OBP_delta_season": -0.2,
+      "total_efficiency_season": 4.2,
+      "R_delta_14d": 0.87,
+      "HR_delta_14d": -0.02,
+      "RBI_delta_14d": 0.23,
+      "SB_delta_14d": 0.81,
+      "OBP_delta_14d": 0.06,
+      "total_efficiency_14d": 3.9,
+      "recommendation": ""
+    }
+  ],
+  "roster_pitchers": [
+    {
+      "player_id": "mason_miller_001",
+      "name": "Mason Miller",
+      "position": "P",
+      "no_drop": true,
+      "W_delta_season": 0.0,
+      "SV_delta_season": 0.98,
+      "K_delta_season": 0.87,
+      "ERA_delta_season": 0.84,
+      "WHIP_delta_season": 0.77,
+      "total_efficiency_season": 4.68,
+      "W_delta_14d": -0.02,
+      "SV_delta_14d": 1.7,
+      "K_delta_14d": 0.45,
+      "ERA_delta_14d": 0.76,
+      "WHIP_delta_14d": -0.11,
+      "total_efficiency_14d": 1.56,
+      "recommendation": "hold"
+    }
+  ],
+  "fa_batters": [],
+  "fa_pitchers": []
+}
+```
 
