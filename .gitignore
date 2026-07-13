@@ -1,0 +1,22 @@
+/target
+
+# Credentials — never commit
+config.toml
+
+# Data files — regenerated locally
+data/
+
+# Token cache written by Rust binary at runtime
+~/.fantasy_ingest/
+
+# Agent output files — regenerated each run
+decisions_*.json
+evals/eval_report_*.json
+
+# Bootstrap artifacts
+bootstrap/*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

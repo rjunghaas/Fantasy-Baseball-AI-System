@@ -1,0 +1,32 @@
+# Fantasy Baseball GM — Configuration
+# DO NOT COMMIT THIS FILE. Add config.toml to .gitignore.
+
+[yahoo]
+client_id     = "<example_client_id>"          # Consumer Key from developer.yahoo.com
+client_secret = "<example_client_secret>"          # Consumer Secret from developer.yahoo.com
+league_id     = "1111111"          # e.g. "432.l.12345" — found in Yahoo Fantasy app URL
+redirect_uri  = "http://localhost:8080/callback"
+token_path    = "~/.fantasy_ingest/tokens.json"  # where OAuth tokens are cached
+
+[mlb]
+# No credentials needed — public API
+base_url = "https://statsapi.mlb.com/api/v1"
+probable_starters_days_ahead = 7
+
+[pybaseball]
+# No credentials needed — Python library
+shim_path = "shim/pybaseball_pull.py"  # path to the Python shim script
+stat_windows = ["7d", "14d", "30d", "season"]
+
+[rotoworld]
+# No credentials needed — web scrape
+base_url = "https://www.nbcsports.com/fantasy/baseball/player-news"
+adhoc_hours  = 24
+full_hours   = 72
+
+[park_factors]
+# CSV dropped manually once per season — Rust binary reads and writes to Parquet
+csv_path = "data/park_factors_2026.csv"
+
+[output]
+data_dir = "data"   # all Parquet files land here
