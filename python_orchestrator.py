@@ -127,7 +127,7 @@ def build_roster_mgmt_context() -> str:
 def run_phase_a():
     print("[phase a] running Rust binary --mode full")
     subprocess.run(
-        ["./target/release/fantasy_ingest", "--mode", "full"],
+        ["./target/release/fantasy_ingest_full", "--mode", "full"],
         check=True,
     )
     print("[phase a] running evals")
@@ -234,7 +234,7 @@ async def run_full_agents(today: str):
 async def run_midweek_agents(today: str, week: int):
     print("[midweek] running Rust binary --mode midweek")
     subprocess.run(
-        ["./target/release/fantasy_ingest", "--mode", "midweek"],
+        ["./target/release/fantasy_ingest_full", "--mode", "midweek"],
         check=True,
     )
 
@@ -334,7 +334,7 @@ async def run_midweek_agents(today: str, week: int):
 
 async def run_adhoc(today: str, position: "str | None"):
     print("[adhoc] running Rust binary --mode adhoc")
-    rust_cmd = ["./target/release/fantasy_ingest", "--mode", "adhoc"]
+    rust_cmd = ["./target/release/fantasy_ingest_full", "--mode", "adhoc"]
     if position:
         rust_cmd += ["--position", position]
     subprocess.run(rust_cmd, check=True)
